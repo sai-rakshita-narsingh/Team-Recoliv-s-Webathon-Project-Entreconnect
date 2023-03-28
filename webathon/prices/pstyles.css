@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.button{
+    background-color: beige;
+}
+:root {
+    --blue: hsl(236, 72%, 79%);
+    --factor: 1;
+    --gray-blue: hsl(233, 13%, 49%);
+    --d-gray-blue: hsl(232, 13%, 33%);
+    --color-shadow-mid: rgba(0, 0, 0, 0.25);
+    --color-shadow-dark: rgba(0, 0, 0, 0.9);
+    --metric-toggle-thumb-size: 1.4rem;
+    --metric-toggle-thumb-space: 0.25rem;
+    --metric-toggle-icon-space: 0.4rem;
+    --transition-snappy-duration: 500ms;
+    --transition-silky-duration: 200ms;
+    --transition-icon: opacity var(--transition-snappy-duration) ease, transform var(
+          --transition-silky-duration
+        ) cubic-bezier(1, 0, 0.55, 0.85);
+  }
+body {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 93.75%; /* 15px as per style guide */
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1312918/bg-top.svg') top right no-repeat, url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1312918/bg-bottom.svg') bottom left no-repeat;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+
+header {
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+h1 {
+  font-size: 1.75rem;
+  display: block;
+  color: var(--gray-blue);
+  margin-top: 20px;
+}
+
+.label-info {
+  padding: 20px;
+  color: var(--gray-blue);
+}
+
+main {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  height: 100%;
+  margin: 80px auto;
+  justify-content: center;
+  list-style: none;
+}
+
+.cards li {
+  border-bottom: 1px solid var(--gray-blue);
+  padding: 20px 10px;
+}
+
+.card {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: var(--gray-blue);
+}
+* middle card */
+.card:nth-child(2) {
+  transform: scale(1.15);
+  color: var(--v-l-gray-blue);
+  background-image: var(--gradient);
+}
+
+.card:nth-child(2) > * {
+  transform: scale(0.896);
+}
+
+.card:nth-child(2) .card__price {
+  transform: translateY(12px) scale(0.896);
+}
+
+.card:nth-child(2) .card__tier {
+  transform: translateY(20px) scale(0.896);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.card_price .price_symbol {
+  font-size: 0.6em;
+  padding-right: 10px;
+}
+
+input:checked ~ .cards .card__price:after {
+  content: attr(data-price) " ";
+}
+
+input:not(:checked) ~ .cards .card__price:after {
+  content: attr(data-price-annually) " ";
+  /* in future, maybe we could do calc(attr(data-price number) * 100) 
+  but it's not available yet: https://caniuse.com/#feat=mdn-css_types_attr_type-or-unit_number */
+  
+}
+
+.card > * {
+  flex: 1 1 100%;
+}
+
+.card li:first-child {
+  border-top: 1px solid var(--gray-blue);
+}
+
+.card:nth-child(2) li {
+  border-color: var(--v-l-gray-blue);
+}
+
+.card button {
+  margin-top: 30px;
+  align-self: flex-end;
+  background-image: var(--gradient);
+  color: var(--v-l-gray-blue);
+  padding: 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.card:nth-child(2) button {
+  background: var(--v-l-gray-blue);
+   transform: translateY(-20px);
+}
+
+.card:nth-child(2) button span {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.toggle {
+  position: relative;
+  padding: 0 10px;
+}
+
+.toggle:not([hidden]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.toggle__element {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--metric-toggle-thumb-size);
+  width: 1em;
+  height: 1em;
+}
+
+.toggle__decor {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: calc(
+    (var(--metric-toggle-thumb-size) * 2) + (var(--metric-toggle-thumb-space) * 2)
+  );
+  height: calc(var(--metric-toggle-thumb-size) + (var(--metric-toggle-thumb-space) * 2));
+  background: var(--gradient);
+  margin-left: 0.5rem;
+  border-radius: var(--metric-toggle-thumb-size);
+  transition: background var(--transition-snappy-duration);
+  transition-delay: var(--transition-snappy-duration);
+  box-sizing: content-box;
+  transform: translateY(10px)
+}
+
+.toggle__thumb {
+  display: grid;
+  place-items: center;
+  width: var(--metric-toggle-thumb-size);
+  height: var(--metric-toggle-thumb-size);
+  border-radius: var(--metric-toggle-thumb-size);
+  background: linear-gradient(
+      229.84deg,
+      rgba(255, 255, 255, 0) 14.29%,
+      rgba(48, 48, 48, 0.15) 81.82%
+    ), #ffffff;
+  color: var(--v-l-gray-blue);
+  box-shadow: 0 0 var(--metric-toggle-thumb-space) var(--color-shadow-mid);
+  position: absolute;
+  top: var(--metric-toggle-thumb-space);
+  left: var(--metric-toggle-thumb-space);
+  transform: none;
+  transition: transform var(--transition-silky-duration) cubic-bezier(1, 0, 0.55, 0.85);
+  will-change: transform;
+  z-index: 1;
+}
+
+.toggle__thumb::before {
+  content: '';
+  display: none;
+  width: calc(var(--metric-toggle-thumb-size) - var(--metric-toggle-thumb-space));
+  height: calc(var(--metric-toggle-thumb-size) - var(--metric-toggle-thumb-space));
+  border-radius: calc(var(--metric-toggle-thumb-size) - var(--metric-toggle-thumb-space));
+}
+
+.toggle_decor:hover .toggle_thumb {
+  margin-left: 1px;
+  cursor: pointer;
+}
+
+:checked label .toggle_decor:hover .toggle_thumb {
+  margin-left: -1px;
+}
+
+:checked + label .toggle_decor .toggle_thumb {
+  transform: translateX(var(--metric-toggle-thumb-size)) rotate(270deg);
+  box-shadow: 0 0 var(--metric-toggle-thumb-space) var(--color-shadow-dark);
+}
+
+:focus + label .toggle_decor:not(:hover) .toggle_thumb::before {
+  display: block;
+}
+
+:disabled + label .toggle__decor {
+  filter: grayscale(1) brightness(1.5);
+  cursor: not-allowed;
+}
+
+
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 110%;
+  }
+  
+  .cards {
+    flex-direction: column;
+  }
+  
+  .card:nth-child(2) {
+    transform: scale(1);
+  }
+}

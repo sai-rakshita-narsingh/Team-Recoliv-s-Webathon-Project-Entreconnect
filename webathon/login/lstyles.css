@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(https://cloudinary.hbs.edu/hbsit/image/upload/s--EmT0lNtW--/f_auto,c_fill,h_375,w_750,/v20200101/6978C1C20B650473DD135E5352D37D55.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .wrapper {
+    margin: 100px auto;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .input-area {
+    position: relative;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    color: #333;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #f00;
+    display: none;
+  }
+  
+  .error-txt {
+    font-size: 14px;
+    color: #f00;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  .pass-txt {
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .pass-txt a {
+    color: #777;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  .sign-txt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .sign-txt a {
+    color: #007bff;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+    #submit {
+  background-color: rgba(0, 255, 38, 0.79);
+}

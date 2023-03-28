@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/home.css" />
+  <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+  <link href="https://allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Lato:400,100,300,700,900|Raleway:400,100,200,300,500,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    var p = document.querySelector('.animate'),
+      offset = 600;
+    var offsetMe = function() {
+      if (offset < 0) {
+        offset = 600;
+      }
+      p.style.strokeDashoffset = offset;
+      offset = offset - 5;
+      requestAnimationFrame(offsetMe);
+    }
+    offsetMe();
+  </script>
+  <span class="desktop">
+    <header>
+      <span id="logo">EntreConnect</span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="../investors/iindex.html" target="_blank">Investors</a>
+        <a href="../prices/prindex.html" target="_blank">Mentorships</a>
+        <a href="../resources/rindex.html" target="_blank">E-Resources</a>
+        <a href="../faq/findex.html" target="_blank">FAQ</a>
+        <a href="../test/tindex.html" target="_blank">Testimonials</a>
+      </nav>
+    </header>
+  </span>
+
+  <!--Mobile Navigation-->
+  <span class="mobile">
+    <header>
+      <span id="logo">EntreConnect</span>
+      <div class="button_container">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+    </header>
+
+    <div class="overlay">
+      <nav>
+        <ul>
+            <a href="#">Home</a>
+            <a href="#">Investors</a>
+            <a href="#">Mentorships</a>
+            <a href="#">E-Resources</a>
+            <a href="#">FAQ</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Profile</a>
+            
+        </ul>
+      </nav>
+    </div>
+  </span>
+  
+  <!--Homepage-->
+  <div class="wrapper">
+    <div class="landing"></div>
+  </div>
+
+  <!--Intro text scroll-->
+  <div class="content-1">
+    <span class="one">Start your journey</span>
+    <span class="two">to success with us</span>
+    <span class="three">Entreconnect</span>
+  </div>
+
+  <!--Mouse scroller-->
+  <span class="mouseScroll"></span>
+
+  <!--About section-->
+  <div class="about">
+
+    <div class="hideme">
+      <h1>From funding to mentorship, we've got everything you need to succeed</h1>
+    </div>
+
+    <div class="hideme">
+      <div id="mission">
+        <p>Entrepreneurship can be a challenging journey, especially for those who are just starting. This is where Entreconnect comes in - a platform that connects entrepreneurs and startups with mentors and resources to help them navigate the early stages of their business. Entreconnect understands that entrepreneurs need more than just funding to succeed, and therefore, offers a wide range of support services including mentorship, training, networking opportunities, and more. In addition, Entreconnect also connects entrepreneurs with investors who are interested in funding their businesses. With its comprehensive approach, Entreconnect provides entrepreneurs with everything they need to turn their ideas into successful businesses.</p>
+      </div>
+    </div>
+
+    <!--Contact box-->
+    <div class="hideme">
+      <div class="container"></div>
+      <div class="cube">
+        <div class="default-state">
+          <span>Contact  Us</span>
+        </div>
+        <div class="active-state">
+          <span>entreconnect@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sponsors section-->
+  <div class="sponsors">
+    <div class="hideme">
+      <h2>Come join the startup revolution</h2>
+    </div>
+  </div>
+
+
+  <script src="./main.js"></script>
+
+
+</body>
+
+</html>

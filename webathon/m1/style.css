@@ -1,0 +1,72 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #D1EEEE;
+  }
+  
+  .emp{
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    box-shadow: 4px 4px 9px #d4d4d4;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #C1F0F6;
+    position: relative;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }
+  
+  .emp .i1{
+    border-radius: 50%;
+}
+
+.emp-list{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.emp .logo{
+  position: absolute;
+  top:-25px;
+  right: 30px;
+  border-radius: 5px;
+}
+.emp .l{
+  position: absolute;
+  bottom: -20px;
+  right: 215px;
+}
+
+.emp h1{
+  color: #6996AD;
+}
+.rating {
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 24px;
+  color: #ffd700;
+}
+
+.rating-text {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+button[type="button"] {
+  background-color: navy;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="button"]:hover {
+  background-color: navy;
+}

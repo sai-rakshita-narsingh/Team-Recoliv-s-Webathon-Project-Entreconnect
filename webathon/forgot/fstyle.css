@@ -1,0 +1,113 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(https://cloudinary.hbs.edu/hbsit/image/upload/s--EmT0lNtW--/f_auto,c_fill,h_375,w_750,/v20200101/6978C1C20B650473DD135E5352D37D55.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Form Styling */
+  .wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+  }
+  
+  header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .field {
+    margin-bottom: 25px;
+  }
+  
+  .input-area {
+    position: relative;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    color: #999;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+  .pass-txt {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .pass-txt a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .pass-txt a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-txt {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 576px) {
+    .wrapper {
+      padding: 20px;
+    }
+    
+    header {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      font-size: 14px;
+    }
+    
+    input[type="submit"] {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
